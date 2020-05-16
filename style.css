@@ -1,0 +1,160 @@
+body {
+    margin: 0;
+    text-align: center;
+    background-image: url('/images/background.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+#intro {
+    max-width: 500px;
+    height: 50px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#result,
+#turn {
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 50px;
+    line-height: 50px;
+}
+
+.content {
+    margin-top: 0;
+    min-height: calc(100vh - 80px);
+}
+
+.liz {
+    -webkit-animation: animation 3s;
+    animation: lizWins 3s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+.jenna {
+    -webkit-animation: animation 3s;
+    animation: jennaWins 3s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    width: 550px;
+    height: 450px;
+    justify-content: center;
+    margin: auto;
+}
+
+.grid div {
+    height: 65px;
+    width: 65px;
+    margin: 5px;
+    box-shadow: inset 0px 0px 0px 5px #efefef;
+    background-color: white;
+    border-radius: 150px;
+}
+
+.player-one {
+    border-radius: 150px;
+    background-color: #172762 !important;
+    background-image: url('/images/btn-texture.png');
+    background-size: cover;
+    box-shadow: inset 0px 0px 0px 5px #fe1091 !important;
+}
+
+.player-two {
+    border-radius: 150px;
+    background-color: #ffc752 !important;
+    background-image: url('/images/btn-texture.png');
+    background-size: cover;
+    box-shadow: inset 0px 0px 0px 5px #8bc958 !important;
+}
+
+.bottom {
+    outline: transparent !important;
+    background-color: transparent !important;
+    box-shadow: none !important;
+}
+
+.replay {
+    background-color: #ffc752;
+    border-radius: 4px;
+    width: 120px;
+    height: 30px;
+    line-height: 30px;
+    box-shadow: 2px 2px rgba(68, 68, 86, 0.9);
+    color: white;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin: 20px auto;
+}
+
+.replay:hover {
+    background-color: #cf9c31;
+    cursor: pointer;
+}
+
+.footer {
+    height: 20px;
+    font-size: 8px;
+    letter-spacing: 3px;
+}
+
+@-webkit-keyframes lizWins {
+    from {
+        transform: scale(1);
+        color: black;
+    }
+    to {
+        transform: scale(1.5);
+        color: #fe1091;
+    }
+}
+
+@-webkit-keyframes jennaWins {
+    from {
+        transform: scale(1);
+        color: black;
+    }
+    to {
+        transform: scale(1.5);
+        color: #ffc752;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    body {
+        background-image: url('/images/background-mobile.png');
+    }
+    .grid {
+        width: 400px;
+        height: 300px;
+    }
+    .grid div {
+        height: 45px;
+        width: 45px;
+        margin: 5px;
+        box-shadow: inset 0px 0px 0px 5px #efefef;
+        background-color: white;
+        border-radius: 150px;
+    }
+    #intro,
+    #result,
+    #turn {
+        max-width: 300px;
+    }
+    .replay {
+        margin: 90px auto;
+    }
+}
