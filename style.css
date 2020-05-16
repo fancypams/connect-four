@@ -135,6 +135,7 @@ body {
 
 @media only screen and (max-width: 600px) {
     body {
+        width: 100%;
         background-image: url('/images/background-mobile.png');
     }
     .grid {
@@ -149,12 +150,20 @@ body {
         background-color: white;
         border-radius: 150px;
     }
-    #intro,
+    #intro {
+        max-width: 300px;
+        height: 80px;
+    }
     #result,
     #turn {
         max-width: 300px;
+        height: 80px;
+        line-height: 80px;
     }
     .replay {
         margin: 90px auto;
+    }
+    .footer {
+        margin-top: -10px;
     }
 }
